@@ -1,0 +1,477 @@
+@charset "utf-8";
+
+/* FONTS */
+@font-face {
+    font-family: 'WarHeliosCondCBold';
+    src: url('http://tanki.su/fonts/warhelioscondcbold-webfont.eot');
+    src: url('http://tanki.su/fonts/warhelioscondcbold-webfont.eot#iefix') format('embedded-opentype'),
+         url('./fonts/warhelioscondcbold-webfont.woff') format('woff'),
+         url('http://tanki.su/fonts/warhelioscondcbold-webfont.ttf') format('truetype'),
+         url('http://tanki.su/fonts/warhelioscondcbold-webfont.svg#WarHeliosCondCBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'WarHeliosCondCRegular';
+    src: url('http://tanki.su/fonts/warhelioscondc-webfont.eot');
+    src: url('http://tanki.su/fonts/warhelioscondc-webfont.eot#iefix') format('embedded-opentype'),
+         url('./fonts/warhelioscondcbold-webfont.woff') format('woff'),
+         url('http://tanki.su/fonts/warhelioscondc-webfont.ttf') format('truetype'),
+         url('http://tanki.su/fonts/warhelioscondc-webfont.svg#WarHeliosCondCRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* RESET */
+body, h1, h2, h3, h4, h5, ul, ol, li, p, table, tr, th, td, span, div, a, ins, abbr, address, dl, dt, dd, blockquote, form{
+	background-color:transparent;
+	border: none;
+	margin: 0;
+	padding: 0;}
+li{
+	list-style:none;}
+table{
+	border-collapse:collapse;}
+body, input, textarea{
+	color:#fff;
+	font-family:"WarHeliosCondCRegular", Arial Narrow, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	line-height:1.3;}
+blockquote, table{
+    font-weight: normal;
+    margin-bottom: 20px;}
+p{
+	font-weight: normal;
+    margin-bottom: 15px;}
+
+a:active, a:hover, a:focus{
+	outline: none;}
+a img {
+	border:none;
+	vertical-align:top;}
+a {
+	color:#eb710a;
+	outline: none;
+	text-decoration:underline;}
+a:hover { 
+	color:#fd7400;
+	text-decoration:underline;
+	text-shadow:0 0 3px rgba(189,24,7,0.8),
+				0 0 5px rgba(189,24,7,0.8),
+				0 0 8px rgba(189,24,7,1);}
+
+h1, h2, h3, h4, h5, h6{
+	color:#fff;
+	font-family: "WarHeliosCondCBold", Arial Narrow, Arial, Helvetica, sans-serif;
+	font-weight:normal;
+	margin:0 0 15px 0;}
+h1, h1 img {
+	font-size:47px;}
+h2{
+	font-size:20px;}
+h3{
+	font-size:18px;}
+h4{
+	font-size:15px;}
+h5{
+	font-size:12px;}
+
+html, body {
+	height:100%;
+	width:100%;}
+body{
+	background:url(../img/bg.jpg) no-repeat center top #000;
+	position:relative;}
+
+blockquote{
+	}
+
+.right{
+	float:right;}
+.left{
+	float:left;	}
+.clear {
+	clear:both;
+	font-size:0;
+	line-height:0;
+	overflow:hidden;}
+.clearfix:after {
+    clear: both;
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+	line-height:0;
+    visibility: hidden;}
+* html .clearfix {zoom: 1;} /* IE6 */
+*:first-child+html .clearfix {zoom: 1;} /* IE7 */
+.hide{
+	display:none;}
+.visible{
+	display:block;}
+.radius{
+	position:relative;
+	-moz-border-radius: 5px; /* Firefox */
+	-webkit-border-radius: 5px; /* Safari and Chrome */
+	-khtml-border-radius: 5px; /* Linux browsers */
+	border-radius: 5px; /* Opera 10.50, IE and CSS3 */
+	/*behavior: url(http://tanki.su/s/pie/PIE.htc);*/}
+.strong{
+	font-weight:bold;}
+
+/* GRID */
+.wrapper{
+	background:url(../img/bg.jpg) no-repeat center top #000;
+	_height:1075px;
+	min-height:1075px;
+	margin:0 auto;
+	padding:0 7px;
+	position:relative;
+	width:1102px;}
+
+/* STRUCTURE  */
+/* header */
+.header{
+	height:265px;
+	margin:0 0 92px 0;
+	text-align:center;}
+	.logo{
+		font-size:47px;
+		height:190px;
+		margin:30px 0 0 0;
+		width:500px;}
+
+/* rightCol */
+.rightCol{
+	float:right;
+	margin:0 0 20px 0;
+	position:relative;
+	width:322px;
+	z-index:2;}
+	.promoTxt{
+		margin:0;}
+		.promoTxt h2{
+			margin:0 0 2px 0;}
+		.promoTxt p{
+			color:#999;
+			font-size:16px;
+			margin:0;}
+	
+/* leftCol */
+.leftCol{
+	float:left;
+	margin:0 0 20px 0;
+	position:relative;
+	width:322px;
+	z-index:3;}
+	.promoVideo{
+		background-color:#000;
+		border:2px solid #54554E;
+		height:200px;
+		margin:52px 0 0 0;
+		overflow:hidden;
+		width:317px;
+			-moz-box-shadow: 0px 0px 25px rgba(0,0,0,0.7);
+			-webkit-box-shadow: 0px 0px 25px rgba(0,0,0,0.7);
+			-khtml-box-shadow: 0px 0px 25px rgba(0,0,0,0.7);
+			box-shadow: 0px 0px 25px rgba(0,0,0,0.7);}
+	.screenshots{
+		margin:35px 0 0 0;
+		position:relative;}
+		.screenshots-bg{
+			background:url(../img/carusel-bg.png) no-repeat center center;
+			height:117px;
+			left:-27px;
+			position:absolute;
+			top:10px;
+			width:367px;}
+		.screenshots h2{
+			color:#b4b5ab;
+			margin:0 0 4px 0;
+			text-align:center;
+			text-shadow:1px 1px 1px rgba(0,0,0,0.8);
+			text-transform:uppercase;
+            font-size:18px;}
+			.screenshots ul{
+				}
+				.screenshots li{
+					background:none;}
+					.screenshots a img{
+						border:2px solid #54554e;
+						width:100px;}
+					.screenshots a:hover img{
+						border:2px solid #d86913;}
+	
+/* centerCol */
+.centerCol{
+	margin:0 360px 20px 360px;
+	position:relative;
+	z-index:1;}
+	.playForFree{
+		padding:188px 0 0 0;
+		text-align:center;}
+		/*** with .png ***/
+		/*.playForFree a{
+			background:url(../img/btn.png) no-repeat 0 0;
+			color:#dcdfe0;
+			display:block;
+			font:47px/223px "WarHeliosCondCBold", Arial Narrow, Arial, Helvetica, sans-serif;
+			height:223px;
+			text-decoration:none;
+			text-shadow:-1px -1px 2px rgba(0,0,0,0.8);
+			text-transform:uppercase;
+			width:427px;}
+		.playForFree a:hover{
+			background-position:0 -223px;
+			color:#dcdfe0;
+			text-decoration:none;
+			text-shadow:-1px -1px 2px rgba(0,0,0,0.8);}*/
+		/*** with css3 ***/
+		.playForFree a{
+			display:block;
+			margin:0 auto;
+			text-decoration:none;
+			position:relative;
+			width:375px;}
+		.playForFree a:hover{
+			text-decoration:none;}
+			.playForFree a em{
+				display:block;
+				height:90px;
+				left:142px;
+				position:absolute;
+				top:0;
+				width:90px;
+					-moz-border-radius: 45px;
+					-webkit-border-radius: 45px;
+					-khtml-border-radius: 45px;
+					border-radius: 45px;}
+			.playForFree a:hover em{
+				-moz-box-shadow: 	0px 0px 95px rgba(237,85,5,0.7),
+									0px 0px 115px rgba(255,66,00,0.7),
+									0px 0px 125px rgba(255,66,00,0.9),
+									0px 0px 125px rgba(255,66,00,1);
+				-webkit-box-shadow: 0px 0px 95px rgba(237,85,5,0.7),
+									0px 0px 115px rgba(255,66,00,0.7),
+									0px 0px 125px rgba(255,66,00,0.9),
+									0px 0px 125px rgba(255,66,00,1);
+				-khtml-box-shadow: 	0px 0px 95px rgba(237,85,5,0.7),
+									0px 0px 115px rgba(255,66,00,0.7),
+									0px 0px 125px rgba(255,66,00,0.9),
+									0px 0px 125px rgba(255,66,00,1);
+				box-shadow:			0px 0px 95px rgba(237,85,5,0.7),
+									0px 0px 115px rgba(255,66,00,0.7),
+									0px 0px 125px rgba(255,66,00,0.9),
+									0px 0px 125px rgba(255,66,00,1);}
+			.playForFree a span{
+				background:url(../img/btn.jpg) no-repeat 0 -1px;
+				color:#dcdfe0;
+				cursor:pointer;
+				display:block;
+				font:30px/90px "WarHeliosCondCBold", Arial Narrow, Arial, Helvetica, sans-serif;
+				font-weight: 800;
+				height:90px;
+				margin:0 auto;
+				position:relative;
+				text-shadow:-1px -1px 2px rgba(0,0,0,0.8);
+				text-transform:uppercase;
+				width:375px;
+					-moz-border-radius: 13px;
+					-webkit-border-radius: 13px;
+					-khtml-border-radius: 13px;
+					border-radius: 13px;
+						-moz-box-shadow: 0px 0px 25px rgba(255,66,00,0.7);
+						-webkit-box-shadow: 0px 0px 25px rgba(255,66,00,0.7);
+						-khtml-box-shadow: 0px 0px 25px rgba(255,66,00,0.7);
+						box-shadow: 0px 0px 25px rgba(255,66,00,0.7);}
+			.playForFree a:hover span{
+				background-position:0 -109px;
+				color:#dcdfe0;
+				text-shadow:-1px -1px 2px rgba(0,0,0,0.8);
+					-moz-box-shadow:	0px 0px 35px rgba(255,66,00,0.7),
+										0px 0px 25px rgba(255,66,00,0.7);
+					-webkit-box-shadow:	0px 0px 35px rgba(255,66,00,0.7),
+										0px 0px 25px rgba(255,66,00,0.7);
+					-khtml-box-shadow:	0px 0px 35px rgba(255,66,00,0.7),
+										0px 0px 25px rgba(255,66,00,0.7);
+					box-shadow:			0px 0px 35px rgba(255,66,00,0.7),
+										0px 0px 25px rgba(255,66,00,0.7);}
+	 .linkDownload{
+		 /*margin:-40px 0 0 -30px;*/
+		 margin:30px 0 0 -30px;
+		 position:relative;
+		 text-align:center;}
+		.linkDownload a{
+			background:url(../img/download.png) no-repeat -1px 0;
+			display:inline-block;
+			font-family:"WarHeliosCondCBold", Arial Narrow, Arial, Helvetica, sans-serif;
+			font-size:18px;
+			padding:26px 0 26px 64px;
+			text-transform:uppercase;}
+		.linkDownload a:hover{
+			background-position:0 -177px;}
+	/**/
+	.cdClient{
+		 /*margin:-40px 0 0 -30px;*/
+		 margin:30px 0 0 -30px;
+		 position:relative;
+		 text-align:center;}
+		.cdClient span{
+			background:url(../img/cd-icon.png) no-repeat 0 0;
+			color:#bab9b7;
+			display:inline-block;
+			font-family:"WarHeliosCondCBold", Arial Narrow, Arial, Helvetica, sans-serif;
+			font-size:17px;
+			padding:30px 0 26px 70px;}
+			
+/* awards */
+.awards{
+	background:url(../img/line1.png) no-repeat center top;
+	clear:both;}
+	.awards ul{
+        font-size: 0;
+        line-height: 0;
+		background:url(../img/line2.png) no-repeat center bottom;
+		/*height:80px;*/ /*** with justify ***/
+		margin:0;
+		overflow:visible;
+		padding:10px 0;
+		position:relative;
+		/*text-align:justify !important;*/
+			text-align:center; /*** with inline-block ***/}
+		.awards ul li{
+			background:none;
+			/*display:inline;*/
+				display:inline-block;
+				*display:inline;
+				*zoom:1;
+			/*margin:0;*/
+				margin:0 0 0 44px;
+			padding:0;
+			position:relative;} .awards ul li:first-child{margin:0;}
+		.importantJustify{
+			display:none !important;}
+			.awards-nocolor{
+				height:78px;}
+			.awards-color{
+				height:78px;
+				left:0;
+				position:absolute;
+				top:0;
+            display: none;}
+		
+/* footer */
+.footer{
+	}
+	.copyr{
+		float:right;
+		margin:0;
+		padding:30px 0;
+		text-align:right;
+		width:257px;}
+		.copyr li{
+			background:none;
+			display:inline-block;
+			*display:inline;
+			*zoom:1;
+			margin:0;
+			padding:0;
+			text-align:left;
+            vertical-align:top;}
+			.copyr a{
+				display:block;
+				margin:0 0 15px 0;
+				text-decoration:none;}
+			.copyr a:hover{
+				text-decoration:none;}
+			.copyr p{
+				color:#848484;
+				margin:0;}
+		.copyr li.copyr-wargaming{
+			padding:0 25px 0 0;
+			width:118px;
+            margin-top: -12px;
+            }
+			.copyr-wargaming a{
+				background:url(../img/wargaming.png) no-repeat center top;
+				height:82px;
+                margin-bottom: 6px;
+            }
+            .copyr-wargaming p {
+                padding-left: 3px;
+            }
+		.copyr li.copyr-bigworld{
+			width:110px;}
+			.copyr-bigworld a{
+				background:url(../img/bigworld.jpg) no-repeat center 34px;
+				height:60px;
+				width:110px;}
+			.copyr i{
+				font-family:Arial Narrow, Arial, Helvetica, sans-serif;}
+	.rating{
+		float:right;
+		padding:30px 20px 0 0;}
+		.rating a, .rating a:hover{
+			display:block;
+			text-decoration:none;}
+		.ESRB{
+			background:url(../img/esrb.png) no-repeat left top;
+			height:93px;
+			margin: 29px 0 0;
+			width:126px;}
+		.PEGI{
+			background:url(../img/pegi.jpg) no-repeat left top;
+			height:66px;
+			width:54px;} 
+	.footerMenu{
+		float:left;
+		margin:0;
+		padding:40px 0;
+		width:322px;}
+		.footerMenu li{
+			background:none;
+			margin:0;
+			padding:0;}
+			.footerMenu a{
+				display:inline-block;
+				font-family:"WarHeliosCondCBold", Arial Narrow, Arial, Helvetica, sans-serif;
+				font-size:18px;
+				padding:26px 0 26px 75px;
+				text-transform:uppercase;}
+			.footerMenu-support a{
+				background:url(../img/support.png) no-repeat left top;}
+			.footerMenu-support a:hover{
+				background-position:left -78px;}
+						
+/* CONTENT */
+.content{
+	}
+	/* List */
+	ul{
+		margin:10px 50px 14px 0;
+		padding:0 0 0px 0;
+		overflow:hidden;
+		zoom:1;}
+		ul li{
+			background:url('../img/li.png') no-repeat left top;
+			list-style:none;
+			margin:0 0 15px 0px;
+			padding:0 0 0 24px;}
+			ul ul{
+				margin:10px 0 10px 0;}
+			ul ol{
+				margin:10px 0 10px 24px;}
+			ul ol li{
+				background:none;
+				padding:0;}
+	ol{
+		margin:10px 50px 14px 24px;}
+		ol li{
+			list-style: decimal;
+			margin:0 0 15px 0;
+			vertical-align:top;}
+			ol ul{
+				margin:10px 0 14px 0px;}
+			ol ul li{
+				background:url('../img/li.png') no-repeat left top;
+				list-style:none;}
