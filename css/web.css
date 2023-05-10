@@ -2,7 +2,6 @@
 /* Wayback front page style */
 .Web, .web_text {
     font-family: "Helvetica Neue";
-    margin-bottom: 2px;
 }
 
 #wwmform {
@@ -222,20 +221,6 @@
 
 .web_width_200 {
     width: 200px;
-}
-
-.homepage-collection-search-icon {
-    color: #50c1d6;
-    display: inline-block;
-    font-size: 36px !important;
-    margin: 5px 10px 0 -5px;
-    padding: 0 0 10px 0;
-    vertical-align: middle;
-}
-
-.homepage-collection-search-title {
-    display: inline-block;
-    margin-top: 5px;
 }
 
 #web_footer {

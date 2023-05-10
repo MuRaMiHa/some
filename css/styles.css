@@ -127,6 +127,45 @@ body.wb_embedded {
     text-decoration: none!important;
 }
 
+/* URL QUERY RESULTS */
+h2#query-summary {
+    color: #01a651;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 700ms;
+}
+table#resultsUrl {
+    border-collapse:collapse;
+}
+table#resultsUrl td {
+    text-align:center;font-size:0.8125em;
+    border-bottom:1px solid #ccc;padding:5px;white-space:pre;
+}
+table#resultsUrl td.captures, table#resultsUrl td.dupes,
+table#resultsUrl td.uniques {
+    font-family: "Andale Mono", "Lucida Console", "Courier New", monospace;
+    text-align: right;
+    padding-right: 20px;
+}
+table#resultsUrl td.url {
+    text-align:left;font-size:1.125em;
+    font-family: "Arial","Lucida Grande",sans-serif;
+    width:40%;overflow:hidden;white-space:pre-line;word-break:break-all;
+    word-wrap:break-word;
+}
+table#resultsUrl th {
+    text-align:center;font-size:0.8125em;
+    font-family: "Arial","Lucida Grande",sans-serif;
+    text-transform: uppercase;
+    color:#069;cursor: pointer;
+    border-bottom:1px solid #ccc; border-top:1px solid #ccc;
+    padding:5px; padding-right: 9px;
+}
+.dataTables_info {
+    color: #666 !important;
+}
+
 /* SPN2 UI */
 #spn-title {
     word-wrap:break-word;
