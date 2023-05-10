@@ -1,7 +1,7 @@
 @import 'record.css'; /* for SPN1 */
 
 #wm-ipp-base {
-  min-height:65px;
+  height:65px;/* initial height just in case js code fails */
   padding:0;
   margin:0;
   border:none;
@@ -68,6 +68,13 @@
   background: #fff !important;
   color: #000 !important;
 }
+#wm-ipp form input[type=submit]:hover {
+  background: #eee !important;
+  cursor: pointer !important;
+}
+#wm-ipp form input[type=submit]:active {
+  transform: translateY(1px);
+}
 #wm-ipp a {
   display: inline;
 }    
@@ -95,34 +102,25 @@
 #wm-ipp #wm-logo {
   padding:0 10px;
   vertical-align:middle;
-  min-width:110px;
-  width:15%;
+  min-width:100px;
+  flex: 0 0 100px;
 }
-#wm-ipp table tr::before, #wm-ipp table tr::after {
-  margin: 0;
-  height: auto;
+#wm-ipp .c {
+  padding-left: 4px;
 }
-#wm-ipp table.c {
-  vertical-align:top;
-  margin-left: 4px;
+#wm-ipp .c .u {
+    margin-top: 4px !important;
 }
-#wm-ipp table.c td {
-  border:none !important;
-}
-#wm-ipp .c td.u {
-  padding:3px 0 !important;
-  text-align:center;
-}
-#wm-ipp .c td.n {
+#wm-ipp .n {
   padding:0 0 0 5px !important;
   vertical-align: bottom;
 }
-#wm-ipp .c td.n a {
+#wm-ipp .n a {
   text-decoration:none;
   color:#33f;
   font-weight:bold;
 }
-#wm-ipp .c td.n td.b {
+#wm-ipp .n .b {
   padding:0 6px 0 0 !important;
   text-align:right !important;
   overflow:visible;
@@ -130,20 +128,20 @@
   color:#99a;
   vertical-align:middle;
 }
-#wm-ipp .c td.n tr.y td.b {
+#wm-ipp .n .y .b {
   padding:0 6px 2px 0 !important;
 }
-#wm-ipp .c td.n td.c {
+#wm-ipp .n .c {
   background:#000;
   color:#ff0;
   font-weight:bold;
   padding:0 !important;
   text-align:center;
 }
-#wm-ipp.hi .c td.n td.c {
+#wm-ipp.hi .n td.c {
   color:#ec008c;
 }
-#wm-ipp .c td.n td.f {
+#wm-ipp .n td.f {
   padding:0 0 0 6px !important;
   text-align:left !important;
   overflow:visible;
@@ -151,34 +149,32 @@
   color:#99a;
   vertical-align:middle;
 }
-#wm-ipp .c td.n tr.m td {
+#wm-ipp .n tr.m td {
   text-transform:uppercase;
   white-space:nowrap;
   padding:2px 0;
 }
-#wm-ipp .c td.s {
+#wm-ipp .c .s {
   padding:0 5px 0 0 !important;
-  text-align:center;
   vertical-align:bottom;
 }
 #wm-ipp #wm-nav-captures {
   white-space: nowrap;
 }
-#wm-ipp .c td.s a.t {
+#wm-ipp .c .s a.t {
   color:#33f;
   font-weight:bold;
   line-height: 1.8;
 }
-#wm-ipp .c td.s div.r {
+#wm-ipp .c .s div.r {
   color: #666;
   font-size:9px;
   white-space:nowrap;
 }
-#wm-ipp .c td.k {
-  vertical-align:bottom;
-  padding-bottom:2px;
+#wm-ipp .c .k {
+  padding-bottom:1px;
 }
-#wm-ipp .c td.s {
+#wm-ipp .c .s {
   padding:0 5px 2px 0 !important;
 }
 #wm-ipp td#displayMonthEl {
@@ -213,7 +209,7 @@ div#wm-ipp-sparkline {
   top: 0;
 }  
 #wm-ipp .r {
-  position:relative;
+    margin-left: 4px;
 }
 #wm-ipp .r a {
   color:#33f;
@@ -328,36 +324,38 @@ html.wb-highlight {
   text-overflow: ellipsis;
 }
 }
-@media (min-width:946px) {
+@media (max-width:414px) {
+    #wm-ipp .xxs {
+	display:none !important;
+    }
+}
+@media (min-width:1055px) {
 #wm-ipp #wm-graph-anchor {
   display:block !important;
 }
 }
-@media (max-width:945px) {
+@media (max-width:1054px) {
 #wm-ipp #wm-graph-anchor {
   display:none !important;
 }
-#wm-ipp table.c {
-  width: 85%;
-  width: calc(100% - 131px);
 }
-}
-@media (max-width:1118px) {
+@media (max-width:1163px) {
 #wm-logo {
-  display:none !important;
+    display:none !important;
 }
 }
 
 #wm-btns {
     white-space: nowrap;
+    margin-top: -2px;
 }
 
-#wm-btns>#wm-save-snapshot-open {
+#wm-btns #wm-save-snapshot-open {
   margin-right: 7px;
   top: -6px;
 }
 
-#wm-btns>#wm-sign-in {
+#wm-btns #wm-sign-in {
   box-sizing: content-box;
   display: none;
   margin-right: 7px;
@@ -374,7 +372,7 @@ html.wb-highlight {
   height: 11px;
 }
 
-#wm-btns>#wm-sign-in>.iconochive-person {
+#wm-btns #wm-sign-in>.iconochive-person {
   font-size: 12.5px;
 }
 
@@ -413,7 +411,7 @@ html.wb-highlight {
   margin-bottom: 2px;
 }
 
-#wm-btns>#wm-save-snapshot-in-progress {
+#wm-btns #wm-save-snapshot-in-progress {
   display: none;
   font-size:160%;
   opacity: 0.5;
@@ -422,14 +420,14 @@ html.wb-highlight {
   top: -5px;
 }
 
-#wm-btns>#wm-save-snapshot-success {
+#wm-btns #wm-save-snapshot-success {
   display: none;
   color: green;
   position: relative;
   top: -7px;
 }
 
-#wm-btns>#wm-save-snapshot-fail {
+#wm-btns #wm-save-snapshot-fail {
   display: none;
   color: red;
   position: relative;
@@ -445,10 +443,12 @@ html.wb-highlight {
   display: inline-block;
 }
 #donato {
-    transition: height 0.5s;
+    /* transition effect is disable so as to simplify height adjustment */
+    /*transition: height 0.5s;*/
     height: 0;
     margin: 0;
     padding: 0;
+    border-bottom: 1px solid #999 !important;
 }
 body.wm-modal {
     height: auto !important;
@@ -457,7 +457,7 @@ body.wm-modal {
 #donato #donato-base {
     width: 100%;
     height: 100%;
-    bottom: 0;
+    /*bottom: 0;*/
     margin: 0;
     padding: 0;
     position: absolute;
